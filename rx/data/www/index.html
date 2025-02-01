@@ -1,10 +1,34 @@
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.block-green {
+  display: inline-block;
+  width: 40%%;
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+.block-red {
+  display: inline-block;
+  width: 40%%;
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+</style>
 <body>
 relay val: %relay_val%<br>
 <br>
-<a href="action_page.php?cmd=set_val&val=0">Turn off relay</a><br>
-<br>
-<a href="action_page.php?cmd=set_val&val=1">Turn on relay</a><br>
+<button OnClick="location.href='action_page.php?cmd=set_val&val=0'" class="block-green">Relay Off</button>
+<button OnClick="location.href='action_page.php?cmd=set_val&val=1'" class="block-red">Relay On</button>
 <br>
 <br>
 <a href=config.json>config.json</a>
